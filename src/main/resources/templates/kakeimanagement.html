@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>kakeimanagement</title>
+	<link th:href="@{/css/kakeimanagement.css}" rel="styleSheet">
+</head>
+
+<body>
+	<h1>新規登録</h1>
+	<form action="operation" method="post" th:field="kakeiForm">
+		<table>
+			<tr>
+				<th>使用額</th>
+				<th>清算確認</th>
+				<th>&nbsp;</th>
+			</tr>
+			<tr>
+				<td><input type="text" size="3" th:field="${kakeiForm.charge}" placeholder="5000">円</td>
+				<td>
+					<select>
+					<option value="0">未確認</option>
+					<option value="1">確認済</option>
+					</select>
+				</td>
+				<td><button name="create" type="submit" class="btn" th:text="登録"></td>
+			</tr>
+		</table>
+		<script src="/assets/js/jquery-3.7.0.min.js"></script>
+		<script src="js/kakeimanagement.js"></script>
+	</form>
+</body>
+
+</html>

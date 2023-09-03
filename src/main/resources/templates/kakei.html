@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<title>kakei</title>
+	<link th:href="@{/css/kakei.css}" rel="styleSheet">
+</head>
+<body>
+	<h1>家計リスト</h1>
+	<form action="operation" method="post" th:field="${kakeiForm}">
+		<p>
+			<button name="insert" class="btn" type="submit" th:text="新規作成"></button>
+			<button name="edit" class="btn" type="submit" th:text="編集"></button>
+			<button name="delete" class="btn" type="submit" th:text="削除"></button>
+		</p>
+		<table id="tab">
+			<tr>
+				<th>&nbsp;&nbsp;</th>
+				<th>番号</th>
+				<th>使用額</th>
+				<th>使用前残高</th>
+				<th>使用後残高</th>
+				<th>記録日</th>
+				<th>チェック日</th>
+				<th>清算確認</th>
+				<th>&nbsp;&nbsp;</th>
+			</tr>
+			<tr th:each="kakei : ${kakeiList}">
+				<td><input type="checkbox" th:value="${kakei.id}" class="id"></td>
+				<td th:text="${kakei.id}"></td>
+				<td th:text="${kakei.charge}"></td>
+				<td th:text="${kakei.bfCalculation}"></td>
+				<td th:text="${kakei.afCalculation}"></td>
+				<td th:text="${kakei.recordDate}"></td>
+				<td th:text="${kakei.checkDate}"></td>
+				<td th:text="${kakei.clearance}"></td>
+				<td><input name="clearance" id="clearance" type="submit" class="btn" value="清算"/>
+			</tr>
+		</table>
+		<script src="js/jquery-3.7.0.min.js"></script>
+		<script src="js/kakei.js"></script>
+	</form>
+</body>
+
+</html>
