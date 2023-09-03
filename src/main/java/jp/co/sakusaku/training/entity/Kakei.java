@@ -72,4 +72,5 @@ public class Kakei {
 	public void setCheckDate(LocalDate checkDate) {
 		this.checkDate = checkDate;
 	}
+
 }
