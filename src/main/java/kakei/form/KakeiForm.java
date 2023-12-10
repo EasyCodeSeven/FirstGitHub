@@ -1,4 +1,4 @@
-package jp.co.sakusaku.training.form;
+package kakei.form;
 
 import java.time.LocalDate;
 

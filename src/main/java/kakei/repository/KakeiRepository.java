@@ -1,4 +1,4 @@
-package jp.co.sakusaku.training.repository;
+package kakei.repository;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
 
-import jp.co.sakusaku.training.entity.Kakei;
+import kakei.entity.Kakei;
 
 @Repository
 public class KakeiRepository {

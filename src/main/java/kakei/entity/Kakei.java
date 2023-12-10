@@ -1,4 +1,4 @@
-package jp.co.sakusaku.training.entity;
+package kakei.entity;
 
 import java.time.LocalDate;
 

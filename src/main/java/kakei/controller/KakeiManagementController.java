@@ -1,4 +1,4 @@
-package jp.co.sakusaku.training.controller;
+package kakei.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,9 +6,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import jp.co.sakusaku.training.entity.Kakei;
-import jp.co.sakusaku.training.form.KakeiForm;
-import jp.co.sakusaku.training.repository.KakeiRepository;
+import kakei.entity.Kakei;
+import kakei.form.KakeiForm;
+import kakei.repository.KakeiRepository;
 
 @Controller
 public class KakeiManagementController {
@@ -17,7 +17,7 @@ public class KakeiManagementController {
 	KakeiRepository kakeiRepository;
 
 	/**
-	 * 新規作成を行う画面の初期画面を表示するGETメソッド
+	 * 新規作成を行う画面の初期画面を表示するGETメソッド（完了）
 	 * @param model
 	 * @return 遷移先：新規登録画面
 	 */

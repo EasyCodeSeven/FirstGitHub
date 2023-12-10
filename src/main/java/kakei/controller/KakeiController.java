@@ -1,4 +1,4 @@
-package jp.co.sakusaku.training.controller;
+package kakei.controller;
 
 import java.util.List;
 
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import jp.co.sakusaku.training.entity.Kakei;
-import jp.co.sakusaku.training.form.KakeiForm;
-import jp.co.sakusaku.training.repository.KakeiRepository;
+import kakei.entity.Kakei;
+import kakei.form.KakeiForm;
+import kakei.repository.KakeiRepository;
 
 @Controller
 public class KakeiController {
@@ -59,7 +59,6 @@ public class KakeiController {
 	@PostMapping(value = "operation", params = "insert")
 	public String record() {
 		return "redirect:/kakeimanagement";
-
 	}
 
 	/**
