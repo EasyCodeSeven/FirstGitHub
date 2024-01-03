@@ -2,27 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <head>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+	<script type="text/javascript" th:src="@{/webjars/jquery/3.7.1/jquery.min.js}"></script>
 	<meta charset="UTF-8">
 	<title>新規登録画面</title>
 </head>
 
 <body>
-	<h2>新規登録画面</h2>
-	<form action="t" method="post" th:object="${signupForm}">
-		<div>
-			<label>登録するIDを入力してください</label>
-			<br>
-			<input type="text" th:field="*{kanriUserId}">
-		</div>
-		<div>
-			<label>登録するパスワードを入力してください</label>
-			<br>
-			<input type="text" th:field="*{kanriUserPassword}">
-		</div>
-		<div>
-			<input type="submit" value="新規登録">
-		</div>
-	</form>
+	<div class="container-fluid">
+		<h2>新規登録画面</h2>
+		<form th:action="@{/resist}" method="post" th:object="${signupForm}">
+			<div class="form-group">
+				<div class="col-2">
+					<p><label>登録するIDを入力してください</label>
+						<input type="text" th:field="*{kanriUserId}">
+				</div>
+				<div class="col-2">
+					<p><label>登録するパスワードを入力してください</label>
+						<input type="text" th:field="*{kanriUserPassword}">
+				</div>
+				<p><input type="submit" value="新規登録">
+			</div>
+		</form>
+	</div>
 </body>
 
 </html>
